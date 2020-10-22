@@ -14,9 +14,13 @@ namespace prov1
             bool playing = true;
             while (playing)
             {
-                List<Customer> customers = cs.MakeCustomers();
-                List<Book> books = bs.MakeBook();
+                List<Customer> customers = cs.MakeCustomers(); //gives new customers every day
+                List<Book> books = bs.MakeBook();   //gives new books every day
                 System.Console.WriteLine($"you have {customers.Count} customers");
+                for (int i = 0; i < books.Count; i++)
+                {
+                    books[i].PrintInfo();
+                }
                 for (int i = 0; i < customers.Count;)
                 {
                     System.Console.WriteLine($"customer's stupidity is {customers[i].GetStupidity()} and name is {customers[i].name}");

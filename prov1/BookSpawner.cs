@@ -11,12 +11,12 @@ namespace prov1
 
         public List<Book> MakeBook()
         {
-            books.Clear();
+            books.Clear(); //clears the list so only new books can arrive
             for (int i = 0; i < Generator.Next(5); i++)
             {
-                books.Add(new Book());
+                books.Add(new Book()); //adds a new book
             }
-            return books;
+            return books;   //returns the new books to be used in the game
         }
     }
 }
