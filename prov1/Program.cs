@@ -19,16 +19,16 @@ namespace prov1
                 System.Console.WriteLine($"you have {customers.Count} customers");
                 for (int i = 0; i < books.Count; i++)
                 {
-                    books[i].PrintInfo();
+                    books[i].PrintInfo();//shows all the book info
                 }
-                for (int i = 0; i < customers.Count;)
+                for (int i = 0; i < customers.Count;) // cycles through each customer
                 {
                     System.Console.WriteLine($"customer's stupidity is {customers[i].GetStupidity()} and name is {customers[i].name}");
                     if(Selection(actions)==0){
-                        balance += Sell(books[i]);
+                        balance += Sell(books[i]);//adds to the player balance when a book is sold
                     }
                     else{
-                        System.Console.WriteLine($"sent {customers[i].name} away");
+                        System.Console.WriteLine($"sent {customers[i].name} away"); //sends customer away
                     }
 
                     System.Console.WriteLine("for next customer press any key");
